@@ -1,4 +1,4 @@
--- Create the database event_saver_db and specified it for use.
+-- Create the database burgers_db and specified it for use.
 CREATE DATABASE burgers_db;
 Use burgers_db;
 
