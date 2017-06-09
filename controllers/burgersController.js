@@ -3,42 +3,40 @@ var express = require("express");
 var router = express.Router();
 
 // Import the orm to use its database functions.
-var orm = require("../config/orm.js");
+var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-   res.render("index");
-  /*cat.all(function(data) {
-    var hbsObject = {
-      cats: data
+    burger.selectAll(function(data) {
+      var hbsObject = {
+      burger: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
-  });*/
+  });
 });
 
 router.post("/", function(req, res) {
-  /*cat.create([
-    "name", "sleepy"
+  burger.insertOne([
+    "burger_name"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.burger_name
   ], function() {
     res.redirect("/");
-  });*/
+  });
 });
 
 router.put("/:id", function(req, res) {
-  /*var condition = "id = " + req.params.id;
+  var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
-  cat.update({
-    sleepy: req.body.sleepy
+  burger.updateOne({
+    devoured: req.body.devoured
   }, condition, function() {
     res.redirect("/");
-  });*/
+  });
 });
-
 
 // Export routes for server.js to use.
 module.exports = router;
