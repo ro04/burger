@@ -1,0 +1,13 @@
+body {
+  background: url("../img/orange-wallpaper.jpg");
+  font-family: Arial, sans-serif;
+ }
+
+.img-circle{
+  width: 140px;
+  height: 140px;
+}
+ 
+ #burger-text {
+    width: 300px;
+ }
