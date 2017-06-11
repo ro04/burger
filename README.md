@@ -11,3 +11,5 @@ A burger logger with **MySQL**, **Node**, **Express**, **Handlebars** and a home
 * Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger moves to the right side of the page.
 
 * The app stores every burger in a database, whether devoured or not.
+
+* After the burger is devoured, the user can click the delete button to remove the burger from the database.
