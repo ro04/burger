@@ -14,4 +14,3 @@ A burger logger with **MySQL**, **Node**, **Express**, **Handlebars** and a home
 
 * After the burger is devoured, the user can click the delete button to remove the burger from the database.
 
-***https://onemc-burger.herokuapp.com/***
