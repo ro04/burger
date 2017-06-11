@@ -14,19 +14,21 @@
             {{/each}}
         </ul>
     </div>
+
     <div class="col-md-offset-3 col-md-5">
-            <table class="table table-bordered" id="tbl">
-                {{#each burger}}
-                    {{#if this.devoured}}
-                        <tr>
-                            <td>
-                                {{this.id}}. {{this.burger_name}}
-                            </td>
-                        </tr>
-                    {{/if}}
-                {{/each}}
-            </table>
-        </div>
+        <ul class-'list-group'>
+            {{#each burger}}
+                {{#if this.devoured}}
+                    <li class='list-group-item list-group-item-success'>
+                         {{this.id}}. {{this.burger_name}}
+                        <form action="/{{this.id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="id" value="{{this.id}}">
+                            <button type="submit" class="btn btn-basic" id="btn-devour">Delete It</button>
+                        </form>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
     </div>
 </div>
     
